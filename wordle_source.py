@@ -34,9 +34,12 @@ while (
 					PRESENT + i +
 						['',
 							history[attempts-1].__setitem__(idx, PRESENT_EMOJI),
-							_answer.__setitem__(_answer.index(i), '-')
+							_answer.__setitem__(_idx, '-')
 						][0]
-					if i in _answer
+					if (_idx := ([ 
+							i == j and _in[jdx] != j
+						for jdx, j in enumerate(_answer)] + [True]
+					).index(True)) != 5
 
 					else ABSENT + i +
 						['',

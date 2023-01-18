@@ -28,20 +28,23 @@ while (                                                                         
 							history[attempts-1].__setitem__(idx, CORRECT_EMOJI),    # `_answer` is used to match duplicates
 							_answer.__setitem__(idx, '-')                           # When a match is found, it is removed from `_answer`
 						][0]
-					if i == answer[idx]                                             # `if` statements are created with nested ternary statements
-                                                                                    # if condition1: statement1
-					else                                                            # elif condition2: statement2
-					PRESENT + i +                                                   # else: statement3
-						['',                                                        # 
-							history[attempts-1].__setitem__(idx, PRESENT_EMOJI),    # Is created by
-							_answer.__setitem__(_answer.index(i), '-')              #
-						][0]                                                        # statement1
-					if i in _answer                                                 # if condition1
-                                                                                    # 
-					else ABSENT + i +                                               # else statement2
-						['',                                                        # if condition2
-							history[attempts-1].__setitem__(idx, ABSENT_EMOJI)      # 
-						][0]                                                        # else condition3
+					if i == answer[idx]                                                 # `if` statements are created with nested ternary statements
+                                                                                        # if condition1: statement1
+					else                                                                # elif condition2: statement2
+					PRESENT + i +                                                       # else: statement3
+						['',                                                            # 
+							history[attempts-1].__setitem__(idx, PRESENT_EMOJI),        # Is created by
+							_answer.__setitem__(_idx, '-')                              #
+						][0]                                                            # statement1
+					if (_idx := ([                                                      # if condition1
+							i == j and _in[jdx] != j               # Search for         # 
+						for jdx, j in enumerate(_answer)] + [True] # vacant letter      # else statement2
+					).index(True)) != 5                            # That isn't green   # if condition2
+                                                                                        # 
+					else ABSENT + i +                                                   # else condition3
+						['',                                                        
+							history[attempts-1].__setitem__(idx, ABSENT_EMOJI)      
+						][0]                                                        
 
 				for idx, i in enumerate(list(_in))]) + RESET + ' ' * 20 + '\n' # The previous chunk of code is repeated for every character inputted
                                                                                # 20 spaces are added to the end to clear anything that would've been left over (hacky, oh well)
