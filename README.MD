@@ -19,9 +19,12 @@ This clone of wordle contains:
 ## File Info
 This repo contains 3 python files, all of which contain the exact same code
 
+
 `wordle.py` contains one line of python
 
+
 `wordle_source.py` contains a better formated version of `wordle.py`
+
 
 `wordle_annotated.py` contains comments that explain the process behind each bit of code
 
