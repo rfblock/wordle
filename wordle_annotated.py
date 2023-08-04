@@ -1,5 +1,5 @@
 while (                                                                                    # Everything runs inside this while loop
-	0 if 'attempts' in vars() else                                                         # This is a ternary operater that with the
+	0 if 'attempts' in vars() else                                                         # This is a ternary operator that with the
 		(attempts := 0)                                                                    # condition that 'attempts' has not yet been defined
 		or ((u := True and "← CHANGE THIS IF YOU WANT DARK MODE COLORS") and not u)        # It runs this chunk of code that declares everything
 		or ((v := False and "← CHANGE THIS IF YOU WANT HIGH CONTRAST MODE") and not v)     # It uses the fact that `0 or False` == False
@@ -21,7 +21,7 @@ while (                                                                         
 
 		print(                                                    # This is start of the main loop
 			LINEUP + f'{(attempts := attempts + 1)}. '            # Extra statements can be squeezed into strings
-			+ ['', _answer := list(answer)][0].join(              # By using `['', /statemnet/][0]`, as `statement`
+			+ ['', _answer := list(answer)][0].join(              # By using `['', /statement/][0]`, as `statement`
 				[                                                 # will be ran but only an empty string will be returned
 					CORRECT + i +
 						['',
